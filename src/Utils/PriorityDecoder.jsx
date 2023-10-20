@@ -1,30 +1,24 @@
-
-
-- Urgent (Priority level 4)
-- High (Priority level 3)
-- Medium (Priority level 2)
-- Low (Priority level 1)
-- No priority (Priority level 0)
-
-
-const priorityDecoderFunc=(priorityNumber)=>{
-    let prioriName
-    switch(priorityNumber)
-    {
-        case 0:
-            prioriName= 'No priority';
-        case 1:
-            prioriName= 'Low';
-        case 2:
-            prioriName= 'Medium';
-        case 3:
-            prioriName= 'High';
-        case 4:
-            prioriName= 'Urgent';
-            default:
-                prioriName= 'No priority';
-                
-
+const priorityDecoderFunc = (priorityString) => {
+    let prioriNumber;
+    console.log(priorityString);
+    switch (priorityString) {
+        case "No priority":
+            prioriNumber = 0;
+            break;
+        case "Low":
+            prioriNumber = 1;
+            break;
+        case "Medium":
+            prioriNumber = 2;
+            break;
+        case "High":
+            prioriNumber = 3;
+            break;
+        case "Urgent":
+            prioriNumber = 4;
+            break;
     }
-    return prioriName
-}
+    return prioriNumber;
+};
+
+export default priorityDecoderFunc;

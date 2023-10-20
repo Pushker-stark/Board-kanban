@@ -190,6 +190,7 @@ function App() {
                 <select name="viewSelect" id="viewSelect" onChange={(e) => { setView(e.target.value) }}>
                     <option value="users">Users</option>
                     <option value="status">status</option>
+                    <option value="priority">priority</option>
                 </select>
             </div>
         <div className="app_boards">

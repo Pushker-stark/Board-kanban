@@ -5,8 +5,10 @@ import NewCard from "../NewCard/NewCard";
 import Dropdown from "../Dropdown/Dropdown";
 import { MoreHorizontal } from "react-feather";
 import "./Dashboard.css";
+import priorityDecoderFunc from "../../Utils/PriorityDecoder";
 
 const statusGrouping = ["Backlog", "Todo", "In progress",];
+const priorityGrouping = [ 'No priority',"Low","Medium", "High", "Urgent",];
 
 export default function Dashboard({ tickets, users, view }) {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -85,6 +87,45 @@ export default function Dashboard({ tickets, users, view }) {
 
                         {ticketData?.map((item) => {
                             if (item?.userId === itemUser.id) {
+                                return (
+                                    <>
+                                        <NewCard cardData={item} />
+                                    </>
+                                );
+                            }
+                        })}
+                    </div>
+
+                </div>
+            )}
+
+
+            {/* //Priority  */}
+
+            {view === 'priority' && priorityGrouping.map((priority) =>
+                <div  className="view-wrapper">
+                    <p className="board_header_title">
+                        <span>{ priority}</span>
+                    </p>
+
+                    <div
+                        className="board_header_title_more"
+                        onClick={() => setShowDropdown(true)}
+                    >
+                        {/* <MoreHorizontal /> */}
+                        {showDropdown && (
+                            <Dropdown
+                                class="board_dropdown"
+                                onClose={() => setShowDropdown(false)}
+                            >
+                                <p onClick={() => { }}>Delete Board</p>
+                            </Dropdown>
+                        )}
+                    </div>
+                    <div className="Card-wrapper">
+
+                        {ticketData?.map((item) => {
+                            if (item?.priority === priorityDecoderFunc(priority)) {
                                 return (
                                     <>
                                         <NewCard cardData={item} />
