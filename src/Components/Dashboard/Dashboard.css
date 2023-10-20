@@ -1,0 +1,16 @@
+.Card-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 9px;
+}
+.view-wrapper{
+
+}
+
+.dashboard-parent{
+    display: flex;
+    gap: 10px;
+
+}
