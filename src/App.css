@@ -70,3 +70,9 @@
 .app_boards_container::-webkit-scrollbar {
   display: none;
 }
+
+#viewSelect{
+  font-weight: bold;
+  padding: 7px 2px;
+  margin-left: 35px;
+}

@@ -6,7 +6,7 @@ import "./Dashboard.css";
 import priorityDecoderFunc from "../../Utils/PriorityDecoder";
 
 const statusGrouping = ["Backlog", "Todo", "In progress",];
-const priorityGrouping = [ 'No priority',"Low","Medium", "High", "Urgent",];
+const priorityGrouping = [ 'No priority',"Urgent","High","Medium","Low",];
 
 export default function Dashboard({ tickets, users, view }) {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -98,9 +98,15 @@ export default function Dashboard({ tickets, users, view }) {
 
             {view === 'users' && usersData.map((itemUser) =>
                 <div  className="view-wrapper">
-                    <p className="board_header_title">
-                        <span>{itemUser.name}</span>
-                    </p>
+                    <div id="board_title">
+                        {Object.keys(itemUser).length?<div className='right-column'>
+                        <div className='circle-big'> {itemUser.name?.slice(0,2).toUpperCase()}</div>
+                        {itemUser.available? <div className='circle dot-position green'></div>: <div className='circle dot-position lightgray'></div>}
+                        </div>:null}
+                        <p className="board_header_title">
+                            <span>{itemUser.name}</span>
+                        </p>
+                    </div>
 
                     <div
                         className="board_header_title_more"

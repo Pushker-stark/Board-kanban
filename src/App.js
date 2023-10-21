@@ -57,8 +57,8 @@ function App() {
         <div>
                 <select name="viewSelect" id="viewSelect" onChange={(e) => { setView(e.target.value) }}>
                     <option value="Users">Users</option>
-                    <option value="status">status</option>
-                    <option value="priority">priority</option>
+                    <option value="status">Status</option>
+                    <option value="priority">Priority</option>
                 </select>
             </div>
         <div className="app_boards">

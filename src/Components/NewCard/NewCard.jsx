@@ -10,13 +10,13 @@ export default function NewCard({cardData,userCardData={}}) {
   if (cardData.priority===0) {
     priorPath = './no_prior.png';
   } else if (cardData.priority===1) {
-    priorPath = './low_prior.png';
-  } else if (cardData.priority===2){
-    priorPath = './mid_prior.png';
-  } else if(cardData.priority===3){
-    priorPath = './high_prior.png';
-  }else {
     priorPath = './urgent-icon.jpg';
+  } else if (cardData.priority===2){
+    priorPath = './high_prior.png';
+  } else if(cardData.priority===3){
+    priorPath = './mid_prior.png';
+  }else {
+    priorPath = './low_prior.png';
   }
 
   if (cardData.status==='Backlog') {
