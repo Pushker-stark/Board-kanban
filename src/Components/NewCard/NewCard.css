@@ -1,0 +1,87 @@
+.card-parent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 5px;
+    width: 26em;
+    height: 9rem;
+
+
+}
+#up{
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    /* padding: 10px; Optional padding */
+    /* background-color: cyan; */
+    align-items: center;
+}
+
+.left-column{
+  /* flex: 1; */
+  /* padding: 10px; */
+}
+.right-column {
+  /* flex: 1; */
+  /* padding: 10px; Optional padding */
+  /* margin-right: -20em; */
+}
+#mid{
+    /* background-color: orange; */
+    display: inline-block;
+    display: flex;
+    gap: 4px;
+}
+#down{
+    /* background-color: green; */
+    display: flex;
+    gap: 7px;
+}
+#ticket_id{
+    color: gray;
+    font-weight:500;
+}
+#ticket_title{
+    color: rgba(0, 0, 0, 0.884);
+    font-weight: bold;
+    padding: auto;
+    /* top right bottom left */
+}
+#icon{
+    /* background-color: aqua; */
+}
+
+
+.circle
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 33px;
+    border: 1px solid white;
+}
+.circle-big
+{
+    width: 32px;
+    height: 32px;
+    border-radius: 33px;
+    background: purple;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green{
+    background: lightgreen;
+}
+.lightgray{
+    background: lightgray;
+}
+
+.dot-position
+{
+    position: relative;
+    top: -8px;
+    left: 20px;
+    z-index: 10;
+}

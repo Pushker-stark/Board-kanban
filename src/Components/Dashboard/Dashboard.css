@@ -1,0 +1,26 @@
+.Card-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 9px;
+    overflow: auto;
+}
+.view-wrapper{
+
+}
+
+.dashboard-parent{
+    display: flex;
+    gap: 10px;
+
+}
+#condition{
+    display: none;
+}
+
+#board_title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
