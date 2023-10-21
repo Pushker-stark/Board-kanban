@@ -6,7 +6,7 @@ const priorityDecoderFunc = (priorityString) => {
             prioriNumber = 0;
             break;
         case "Low":
-            prioriNumber = 1;
+            prioriNumber = 4;
             break;
         case "Medium":
             prioriNumber = 3;
@@ -15,7 +15,7 @@ const priorityDecoderFunc = (priorityString) => {
             prioriNumber = 2;
             break;
         case "Urgent":
-            prioriNumber = 4;
+            prioriNumber = 1;
             break;
     }
     return prioriNumber;
