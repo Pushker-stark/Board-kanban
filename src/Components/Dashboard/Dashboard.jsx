@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Board from "../Board/Board";
-import Card from "../Card/Card";
 import NewCard from "../NewCard/NewCard";
 import Dropdown from "../Dropdown/Dropdown";
 import { MoreHorizontal } from "react-feather";
